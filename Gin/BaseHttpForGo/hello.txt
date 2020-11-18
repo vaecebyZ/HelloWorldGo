@@ -1,0 +1,11 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>你好</title>
+</head>
+<body>
+        <h1>nihao</h1>
+        <img title="title是鼠标悬浮文字" src="https://th.bing.com/th/id/OIP.ufl72kARpHhPeXnruu3TpQAAAA?w=148&h=155&c=7&o=5&pid=1.7" alt="alt是图片加载失败后显示的文字">
+</body>
+</html>
