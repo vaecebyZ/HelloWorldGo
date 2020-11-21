@@ -54,33 +54,58 @@ func main() {
 
 	//------------------------------------字符串分割
 
-	s4 := `https://vaecebyz.github.io`	//`不需要转译
+	s4 := `https://vaecebyz.github.io` //`不需要转译
 
-	fmt.Printf("%T:%v\n",strings.Split(s4,"/"),strings.Split(s4,"/"))//按照/线分割成数组
+	fmt.Printf("%T:%v\n", strings.Split(s4, "/"), strings.Split(s4, "/")) //按照/线分割成数组
 
 	//------------------------------------是否包含
 
-	fmt.Println(strings.Contains(s4,"https")) //true
+	fmt.Println(strings.Contains(s4, "https")) //true
 
-	fmt.Println(strings.Contains(s4,"2")) //false
+	fmt.Println(strings.Contains(s4, "2")) //false
 
 	//------------------------------------开头和结尾
 
-	fmt.Println(strings.HasPrefix(s4,"https"))//true 以https开头
+	fmt.Println(strings.HasPrefix(s4, "https")) //true 以https开头
 
-	fmt.Println(strings.HasSuffix(s4,".io"))//true 以.io结尾
+	fmt.Println(strings.HasSuffix(s4, ".io")) //true 以.io结尾
 
 	//------------------------------------获取指定字符串位置
 
-	fmt.Println(strings.Index(s4,"i"))//18  开始位置
+	fmt.Println(strings.Index(s4, "i")) //18  开始位置
 
-	fmt.Println(strings.LastIndex(s4,"i"))//24 结束的位置
+	fmt.Println(strings.LastIndex(s4, "i")) //24 结束的位置
 
 	//------------------------------------拼接
 
-	fmt.Println(strings.Join(strings.Split(s4,"/"),"+"))//以/拆分以+号拼接
+	fmt.Println(strings.Join(strings.Split(s4, "/"), "+")) //以/拆分以+号拼接
 
+	//------------------------------------len遍历
 
+	//len()求的是byte字节数量
 
+	//非ascii码类型字符为rune类型
+
+	//ascii码类型的为 byte 或者叫 unit8
+
+	s5 := "Sanka さんか"
+
+	for _, c := range s5 {
+		fmt.Printf("%c\n", c)
+	}
+
+	//-----------------------------------字符串修改
+
+	s6 := "你好吗？"
+
+	//s6[0] = "1" 无法这样修改
+
+	s66 := []rune(s6) //把s6转换成rune切片 -> ['你' ’好‘ ’吗‘ ’？‘]
+
+	s66[0] = '我' //只能用字符类型
+
+	fmt.Printf("%T,%T\n", "你", '你') //rune 是int32的别名 byte 是 uint8的别名
+
+	fmt.Println(string(s66)) //转换成字符串
 
 }
