@@ -26,15 +26,13 @@ func main() {
 	//
 	//}
 
-	//变种4 for range 返回键值对
+	//变种4 for range 返回键值对 常用
 
 	s := "你好SANKA"
 
-	for i,v := range s{
+	for i, v := range s {
 		//i索引 v值
-		fmt.Printf("%d,%c",i,v) //
+		fmt.Printf("%d,%c", i, v) //
 	}
-
-
 
 }
