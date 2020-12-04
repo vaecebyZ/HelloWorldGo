@@ -52,7 +52,7 @@ func main() {
 	}
 	fmt.Println(av)
 
-	//多维遍历 双重for
+	//多维遍历 双重for _为下标 并不使用所以丢弃
 	for _, v := range av {
 		fmt.Println(v)
 		for _, vs := range v {
