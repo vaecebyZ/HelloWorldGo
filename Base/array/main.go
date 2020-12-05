@@ -65,5 +65,5 @@ func main() {
 	avi := [...]int{1, 2, 3}
 	avii := avi //直接复制值
 	avii[0] = 12
-	fmt.Printf("avi:%v,avii:%v\n", avi, avii)
+	fmt.Printf("avi:%v,avii:%v\n", avi, avii) //结果不会影响之前的数组
 }
